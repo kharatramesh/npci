@@ -10,7 +10,7 @@ services:
     depends_on:
     - db
     environment:
-    - dbservername=db
+    - servername=db
     - dbusername=postgres
     - dbpassword=1234
   db:
