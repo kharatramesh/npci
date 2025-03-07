@@ -1,0 +1,25 @@
+version: "3.9"
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: ./backend.dockerfile
+    container_name: backend
+    ports:
+    - "9090:8090"
+    depends_on:
+    - db
+    environment:
+    - dbservername=db
+    - dbusername=postgres
+    - dbpassword=1234
+  db:
+    build:
+      context: .
+      dockerfile: ./database.dockerfile
+    container_name: database
+    ports:
+    - "5432:5432"
+    environment:
+    - POSTGRES_USER=postgres
+    - POSTGRES_PASSWORD=1234
