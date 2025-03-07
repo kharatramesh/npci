@@ -33,7 +33,7 @@ spec:
         app: project
     spec:
       containers:
-      - image: kharatramesh/vadapavimages:${build_id}
+      - image: kharatramesh/vadapavimages:4
         name: backendkb
         ports:
         - containerPort: 5432
