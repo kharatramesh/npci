@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: springboot
+  namespace: argocd
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/kharatramesh/npci.git
+    targetRevision: HEAD
+    path: springboot
+  destination: 
+    server: https://kubernetes.default.svc
+    namespace: springboot
+
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+
+    automated:
+      selfHeal: true
+      prune: true
