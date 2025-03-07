@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/kharatramesh/npci.git
     targetRevision: HEAD
-    path: springboot
+    path: argocd
   destination: 
     server: https://kubernetes.default.svc
     namespace: springboot
