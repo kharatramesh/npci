@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: project
+  name: projectdp
+  namespace: sprint
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: project
+  template:
+    metadata:
+      labels:
+        app: project
+    spec:
+      containers:
+      - image: kharatramesh/vadapavimages:${build_id}
+        name: frontendkb
+        ports:
+        - containerPort: 8090
+        env:
+          - name: servername
+            value: 'projects1'
+          - name: dbusername
+            value: 'postgres'
+          - name: dbpassword
+            value: '1234'
