@@ -3,7 +3,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: projects1
-  namespace: bookmydr
+  namespace: springboot
   labels:
    app: project
 spec:
