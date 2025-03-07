@@ -16,7 +16,7 @@ spec:
         app: project
     spec:
       containers:
-      - image: kharatramesh/vadapavimages:${build_id}
+      - image: kharatramesh/vadapavimages:4
         name: frontendkb
         ports:
         - containerPort: 8090
