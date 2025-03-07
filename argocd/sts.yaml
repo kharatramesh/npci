@@ -20,7 +20,7 @@ metadata:
   labels:
     app: project
   name: projectsts
-  namespace: sprint
+  namespace: springboot
 spec:
   serviceName: projects1
   replicas: 1
