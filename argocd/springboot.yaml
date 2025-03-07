@@ -4,7 +4,7 @@ metadata:
   labels:
     app: project
   name: projectdp
-  namespace: sprint
+  namespace: springboot
 spec:
   replicas: 3
   selector:
